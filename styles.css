@@ -1,0 +1,100 @@
+body{
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.screen{
+    background-image: url('./wall_bricks_texture_117134_3840x2160.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    cursor: none;
+}
+#target{
+    position: absolute;
+    transition: .2s all linear;
+    z-index: 6;
+}
+#curser{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    z-index: 9;
+}
+#scores{
+    font-size: 20px;
+    margin: 10px;
+    position: absolute;
+    z-index: 6;
+    top: 0;
+    right: 0;
+    color: white;
+    padding: 10px;
+    background-color: rgba(48, 48, 48, 0.966);
+    border-radius:10px;
+    border: 4px solid red;
+    box-shadow: 0 0 10px red;
+}
+#hitBlood{
+    z-index: 4;
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+.startPage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    background-image: url(./startp.jpg);
+    background-size: cover;
+}
+.start{
+    padding: 40px;
+    border: none;
+    font-family:Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size: 6rem;
+    outline: none;
+    background-color: transparent;
+    color: rgb(65, 65, 65);
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: rgb(255, 217, 0);
+    animation-name: zoom;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes zoom{
+    0%{transform: scale(1);}
+    50%{transform: scale(1.4);}
+    100%{transform: scale(1);}
+}
+.highscores{
+    font-size: 2rem;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    cursor: none;
+}
+::selection{
+    background-color: none;
+}
